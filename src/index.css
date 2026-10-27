@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cinzel", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-cosmic-950: #05060d;
+  --color-cosmic-900: #080914;
+  --color-cosmic-850: #0d0f22;
+  --color-cosmic-800: #141733;
+  --color-cosmic-750: #1b1f44;
+  --color-cosmic-700: #242a5c;
+  --color-cosmic-600: #353d82;
+
+  --color-lavender-200: #f3e8ff;
+  --color-lavender-300: #e9d5ff;
+  --color-lavender-400: #d8b4fe;
+  --color-lavender-500: #c084fc;
+  --color-lavender-600: #a855f7;
+
+  --color-teal-200: #99f6e4;
+  --color-teal-300: #5eead4;
+  --color-teal-400: #2dd4bf;
+  --color-teal-500: #14b8a6;
+  --color-teal-600: #0d9488;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #080914;
+  color: #e0e2ec;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-serif);
+}
+
+.font-mono-code {
+  font-family: var(--font-mono);
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #080914;
+}
+::-webkit-scrollbar-thumb {
+  background: #242a5c;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2dd4bf;
+}
+
+/* Subtle stars background with lavender and teal ambient dust */
+.cosmic-bg {
+  background-color: #080914;
+  background-image: 
+    radial-gradient(1px 1px at 20px 30px, rgba(216, 180, 254, 0.3), transparent),
+    radial-gradient(1px 1px at 75px 120px, rgba(94, 234, 212, 0.25), transparent),
+    radial-gradient(1.5px 1.5px at 160px 80px, rgba(216, 180, 254, 0.4), transparent),
+    radial-gradient(1px 1px at 240px 190px, rgba(255, 255, 255, 0.18), transparent),
+    radial-gradient(1px 1px at 380px 140px, rgba(45, 212, 191, 0.3), transparent),
+    radial-gradient(1.5px 1.5px at 490px 230px, rgba(233, 213, 255, 0.3), transparent),
+    radial-gradient(1px 1px at 580px 70px, rgba(94, 234, 212, 0.25), transparent),
+    radial-gradient(1px 1px at 700px 160px, rgba(216, 180, 254, 0.2), transparent),
+    radial-gradient(800px 500px at 50% 0%, rgba(36, 42, 92, 0.4), transparent 70%);
+  background-size: 600px 400px, 600px 400px, 600px 400px, 600px 400px, 600px 400px, 600px 400px, 600px 400px, 600px 400px, 100% 100%;
+}
